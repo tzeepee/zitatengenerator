@@ -28,8 +28,8 @@ async function getQuote() {
         const response = await fetch(proxyUrl + apiUrl);
         const data = await response.json();
         // falls es keinen Autor gibt, füge unbekannt ein
-        if (data.quoteAuthor === " ") {
-            authorText.innerText = "Unbekannt";
+        if (data.quoteAuthor === '') {
+            authorText.innerText = 'Unbekannt';
         }
         else {
             authorText.innerText = data.quoteAuthor;
